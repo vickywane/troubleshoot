@@ -21,11 +21,17 @@ class Contacts extends Component {
             return "An error has ocurred";
           }
 
-          return contacts.map(contact => (
-            <View>
-              <Text> {contact.contacts.firstname} </Text>
-            </View>
-          ))
+          return (
+            <Fragment>{
+              contacts.map(contact => 
+                ( 
+                <View>
+                  <Text> {contact.contacts.firstname} </Text>
+                </View>
+                )
+              )
+            }</Fragment>
+          )
         }
         });
       </Query>
